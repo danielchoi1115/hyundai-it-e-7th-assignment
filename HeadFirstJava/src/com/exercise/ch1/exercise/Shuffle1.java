@@ -1,4 +1,4 @@
-package com.exercise.codemagnets;
+package com.exercise.ch1.exercise;
 
 public class Shuffle1 {
 	public static void main(String[] args) {

@@ -10,4 +10,8 @@ public class Amoeba extends Shape{
 	void playSound() {
 		System.out.println("Play Amoeba Sound!");
 	}
+	
+	void eat() {
+		System.out.println("Eat!");
+	}
 }
