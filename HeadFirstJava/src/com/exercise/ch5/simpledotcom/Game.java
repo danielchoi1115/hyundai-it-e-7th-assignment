@@ -1,6 +1,5 @@
 package com.exercise.ch5.simpledotcom;
 
-import java.util.Scanner;
 
 public class Game {
 	public static void main(String[] args) {
