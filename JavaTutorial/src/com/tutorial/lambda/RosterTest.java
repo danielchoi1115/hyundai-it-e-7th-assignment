@@ -12,10 +12,6 @@ import java.time.chrono.IsoChronology;
  
 public class RosterTest {
  
-    interface CheckPerson {
-        boolean test(Person p);
-    }
- 
     // Approach 1: Create Methods that Search for Persons that Match One
     // Characteristic
  
@@ -108,9 +104,24 @@ public class RosterTest {
     public static void main(String... args) {
  
         List<Person> roster = Person.createRoster();
- 
-        for (Person p : roster) {
-            p.printPerson();
-        }
+// 
+//        RosterTest.printPersons(roster, new CheckPersonEligibleForSelectiveService());
+        
+       
+//        roster.forEach(
+//	        (Person p) -> 
+//	        	System.out.println( p.getGender() == Person.Sex.MALE
+//	                && p.getAge() >= 18
+//	                && p.getAge() <= 25)
+//        );
+        
+        processPersons(
+        	    roster,
+        	    p -> p.getGender() == Person.Sex.MALE
+        	        && p.getAge() >= 18
+        	        && p.getAge() <= 25,
+        	    p -> p.printPerson()
+        	);
+        
     }
 }
